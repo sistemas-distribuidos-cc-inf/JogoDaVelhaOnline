@@ -12,12 +12,12 @@ public class JogoServidor {
 
 			Naming.bind("rmi://localhost:8888/Jogo", jogo);
 
-			System.out.println("Servidor pronto e aguardando jogadores...");
+			System.out.println("Servidor executando");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		
+		System.out.println("Aguardando novos jogadores...");
 	}
 }
