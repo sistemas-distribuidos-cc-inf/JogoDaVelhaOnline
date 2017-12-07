@@ -18,6 +18,35 @@ public class Player implements Serializable {
 		super();
 	}
 	
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Player other = (Player) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
+	public Player(int id, String name, int tipo, int inimigoId, int tabuleiro[], boolean flag, boolean newGame, int score, boolean exist) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.tipo = tipo;
+		this.inimigoID = inimigoId;
+		this.tabuleiro = tabuleiro;
+		this.flag = flag;
+		this.newGame = newGame;
+		this.score = score;
+		this.exist = exist;
+	}
+	
 	public boolean getExist() {
 		return exist;
 	}
